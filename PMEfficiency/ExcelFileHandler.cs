@@ -7,20 +7,25 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace PMEfficiency
 {
-    internal class ExcelFileHandler
+    public class ExcelFileHandler
     {
-        List<ProjectHolder> projectObjects;
+        
         Excel.Application xlApp;
         Excel.Workbook wb;
         Excel.Worksheet ws;
         Excel.Range range;
         string path;
-        Dictionary<string, int> headerMap;
+        public Dictionary<string, int> headerMap;
         public ExcelFileHandler(string path)
         {
             xlApp = new Excel.Application();
             this.path = path;
+            this.LoadFile();
+        }
 
+        public Excel.Range getRange()
+        {
+            return range;
         }
 
         public void LoadFile()
@@ -30,7 +35,6 @@ namespace PMEfficiency
 
             ws = wb.Worksheets[1];
             range = ws.UsedRange;
-            projectObjects = new List<ProjectHolder>();
             headerMap = grabHeaders();
 
         }
@@ -75,39 +79,6 @@ namespace PMEfficiency
             }
             while (header != string.Empty);
             return returnApplicableHeaders;
-        }
-
-        public void processSpreadSheet(Dictionary<string, int> headers)
-        {
-            bool flag = true;
-            int iterator = 2;
-            while (flag)
-            {
-                ProjectHolder addObj = new ProjectHolder();
-                foreach (string key in headers.Keys)
-                {
-
-                    if (range.Cells[iterator, headers[key]].Value == null)
-                    {
-                        flag = false;
-                        break;
-                    }
-
-                    if (key == "start")
-                    {
-                        addObj.projectStart = range.Cells[iterator, headers[key]].Value;
-                    }
-                    else if (key == "end")
-                    {
-                        addObj.projectFinish = range.Cells[iterator, headers[key]].Value;
-                    }
-                    if (flag)
-                    {
-                        projectObjects.Add(addObj);
-                    }
-                }
-                iterator++;
-            }
         }
     }
 }

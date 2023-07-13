@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PMEfficiency
 {
-    internal class ProjectHolder
+    public class ProjectHolder
     {
         public string portfolio, costCenterNum, Group, Clarity, ITDM, projectName, projectDescription;
         public DateTime projectStart, projectFinish;
