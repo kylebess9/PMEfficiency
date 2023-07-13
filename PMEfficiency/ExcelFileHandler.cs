@@ -14,8 +14,10 @@ namespace PMEfficiency
         Excel.Workbook wb;
         Excel.Worksheet ws;
         Excel.Range range;
+
         string path;
         public Dictionary<string, int> headerMap;
+
         public ExcelFileHandler(string path)
         {
             xlApp = new Excel.Application();

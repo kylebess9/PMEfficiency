@@ -142,6 +142,7 @@
             this.btnLoadFile1.TabIndex = 3;
             this.btnLoadFile1.Text = "File 1";
             this.btnLoadFile1.UseVisualStyleBackColor = false;
+            this.btnLoadFile1.Click += new System.EventHandler(this.btnLoadFile1_Click);
             // 
             // btnSubmitFile1
             // 

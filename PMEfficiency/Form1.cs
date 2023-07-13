@@ -17,14 +17,27 @@ namespace PMEfficiency
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
+
             {
                 string filePath = openFileDialog.FileName;
                 CompareClass.openSharePointSheet(filePath);
 
 
 
+    
+            }
+        }
+
+
+        private void btnLoadFile1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ExcelFileHandler File1 = new ExcelFileHandler(openFileDialog.FileName);
 
             }
+
         }
     }
 }
