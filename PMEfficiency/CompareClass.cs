@@ -10,16 +10,14 @@ namespace PMEfficiency
 {
     public static class CompareClass
     {
-        public static List<ExcelFileHandler> excelsheets = new List<ExcelFileHandler>();
+        public static ExcelFileHandler sharePointSheet;
         public static List<ProjectHolder> projectObjects = new List<ProjectHolder>();
-        public static void openExcelFile(string path)
+        public static void openSharePointSheet(string path)
         {
-            ExcelFileHandler newSheet = new ExcelFileHandler(path);
-
-            excelsheets.Add(newSheet);
+            sharePointSheet = new ExcelFileHandler(path);
         }
 
-        public static void processSpreadSheet(ExcelFileHandler sheet)
+        public static void setProjectObjects(ExcelFileHandler sheet)
         {
             bool flag = true;
             int iterator = 2;

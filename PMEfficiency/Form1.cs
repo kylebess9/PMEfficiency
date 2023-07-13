@@ -19,7 +19,7 @@ namespace PMEfficiency
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
-
+                CompareClass.openSharePointSheet(filePath);
 
 
 
