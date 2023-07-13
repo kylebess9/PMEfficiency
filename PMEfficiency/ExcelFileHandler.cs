@@ -22,7 +22,10 @@ namespace PMEfficiency
         {
             xlApp = new Excel.Application();
             this.path = path;
-            this.LoadFile();
+            wb = xlApp.Workbooks.Open(path);
+            ws = wb.Worksheets[1];
+            range = ws.UsedRange;
+            headerMap = grabHeaders();
         }
 
         public Excel.Range getRange()
@@ -33,11 +36,7 @@ namespace PMEfficiency
         public void LoadFile()
         {
 
-            wb = xlApp.Workbooks.Open(path);
-
-            ws = wb.Worksheets[1];
-            range = ws.UsedRange;
-            headerMap = grabHeaders();
+            
 
         }
 
