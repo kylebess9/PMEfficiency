@@ -17,14 +17,22 @@ namespace PMEfficiency
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {                
+                ExcelFileHandler SharePoint = new ExcelFileHandler(openFileDialog.FileName);
+                
+                
+            }
+        }
+
+        private void btnLoadFile1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string filePath = openFileDialog.FileName;
-
-
-
-
+                ExcelFileHandler File1 = new ExcelFileHandler(openFileDialog.FileName);
 
             }
+
         }
     }
 }
