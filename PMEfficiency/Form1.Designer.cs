@@ -28,211 +28,272 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.howToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSharePoint = new System.Windows.Forms.Button();
-            this.btnLoadFile2 = new System.Windows.Forms.Button();
-            this.btnLoadFile1 = new System.Windows.Forms.Button();
-            this.btnSubmitFile1 = new System.Windows.Forms.Button();
-            this.btnSubmitFile2 = new System.Windows.Forms.Button();
-            this.lbxOutputFile1 = new System.Windows.Forms.ListBox();
-            this.lbxOutputFile2 = new System.Windows.Forms.ListBox();
-            this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            btnCompare = new Button();
+            splitContainerDataGridView = new SplitContainer();
+            dataGridView1 = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            NameColumn = new DataGridViewTextBoxColumn();
+            Description = new DataGridViewTextBoxColumn();
+            dataGridView2 = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            panelNavBar = new Panel();
+            pictureBoxMenu = new PictureBox();
+            lblHelp = new Label();
+            lblSearch = new Label();
+            panelTabMenu = new Panel();
+            btnSharePoint = new Button();
+            btnWorkbook1 = new Button();
+            btnWorkbook2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)splitContainerDataGridView).BeginInit();
+            splitContainerDataGridView.Panel1.SuspendLayout();
+            splitContainerDataGridView.Panel2.SuspendLayout();
+            splitContainerDataGridView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            panelNavBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
+            panelTabMenu.SuspendLayout();
+            SuspendLayout();
             // 
-            // menuStrip1
+            // btnCompare
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1308, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            btnCompare.BackColor = Color.FromArgb(38, 113, 61);
+            btnCompare.FlatAppearance.BorderColor = Color.FromArgb(38, 113, 61);
+            btnCompare.FlatStyle = FlatStyle.Flat;
+            btnCompare.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCompare.ForeColor = Color.White;
+            btnCompare.Location = new Point(0, 579);
+            btnCompare.Name = "btnCompare";
+            btnCompare.Size = new Size(170, 42);
+            btnCompare.TabIndex = 0;
+            btnCompare.Text = "Compare Files";
+            btnCompare.UseVisualStyleBackColor = false;
+            btnCompare.Click += btnCompare_Click;
             // 
-            // homeToolStripMenuItem
+            // splitContainerDataGridView
             // 
-            this.homeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem,
-            this.printToolStripMenuItem});
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.homeToolStripMenuItem.Text = "File";
+            splitContainerDataGridView.BackColor = Color.White;
+            splitContainerDataGridView.Dock = DockStyle.Fill;
+            splitContainerDataGridView.Location = new Point(170, 36);
+            splitContainerDataGridView.Name = "splitContainerDataGridView";
             // 
-            // saveToolStripMenuItem
+            // splitContainerDataGridView.Panel1
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.saveToolStripMenuItem.Text = "Save";
+            splitContainerDataGridView.Panel1.Controls.Add(dataGridView1);
             // 
-            // saveAsToolStripMenuItem
+            // splitContainerDataGridView.Panel2
             // 
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.saveAsToolStripMenuItem.Text = "Save As";
+            splitContainerDataGridView.Panel2.Controls.Add(dataGridView2);
+            splitContainerDataGridView.Size = new Size(1179, 846);
+            splitContainerDataGridView.SplitterDistance = 579;
+            splitContainerDataGridView.TabIndex = 1;
             // 
-            // printToolStripMenuItem
+            // dataGridView1
             // 
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.printToolStripMenuItem.Text = "Print";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, Description });
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(579, 846);
+            dataGridView1.TabIndex = 0;
             // 
-            // helpToolStripMenuItem
+            // ID
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.howToToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ID.HeaderText = "ID";
+            ID.Name = "ID";
+            ID.Width = 43;
             // 
-            // howToToolStripMenuItem
+            // NameColumn
             // 
-            this.howToToolStripMenuItem.Name = "howToToolStripMenuItem";
-            this.howToToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.howToToolStripMenuItem.Text = "How to";
+            NameColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            NameColumn.HeaderText = "Name";
+            NameColumn.Name = "NameColumn";
+            NameColumn.Width = 64;
+            // 
+            // Description
+            // 
+            Description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Description.HeaderText = "Description";
+            Description.Name = "Description";
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3 });
+            dataGridView2.Dock = DockStyle.Fill;
+            dataGridView2.Location = new Point(0, 0);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(596, 846);
+            dataGridView2.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewTextBoxColumn1.HeaderText = "ID";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 43;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewTextBoxColumn2.HeaderText = "Name";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 64;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn3.HeaderText = "Description";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // panelNavBar
+            // 
+            panelNavBar.BackColor = Color.FromArgb(64, 64, 64);
+            panelNavBar.Controls.Add(pictureBoxMenu);
+            panelNavBar.Controls.Add(lblHelp);
+            panelNavBar.Controls.Add(lblSearch);
+            panelNavBar.Dock = DockStyle.Top;
+            panelNavBar.Location = new Point(0, 0);
+            panelNavBar.Name = "panelNavBar";
+            panelNavBar.Size = new Size(1349, 36);
+            panelNavBar.TabIndex = 3;
+            // 
+            // pictureBoxMenu
+            // 
+            pictureBoxMenu.Image = (Image)resources.GetObject("pictureBoxMenu.Image");
+            pictureBoxMenu.Location = new Point(7, 6);
+            pictureBoxMenu.Name = "pictureBoxMenu";
+            pictureBoxMenu.Size = new Size(28, 28);
+            pictureBoxMenu.TabIndex = 2;
+            pictureBoxMenu.TabStop = false;
+            pictureBoxMenu.Click += Menu_Click;
+            // 
+            // lblHelp
+            // 
+            lblHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblHelp.BackColor = Color.FromArgb(64, 64, 64);
+            lblHelp.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHelp.ForeColor = Color.White;
+            lblHelp.Location = new Point(1294, 3);
+            lblHelp.Name = "lblHelp";
+            lblHelp.Size = new Size(43, 30);
+            lblHelp.TabIndex = 1;
+            lblHelp.Text = "   ?";
+            // 
+            // lblSearch
+            // 
+            lblSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblSearch.BackColor = Color.White;
+            lblSearch.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSearch.Location = new Point(1148, 7);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(140, 23);
+            lblSearch.TabIndex = 0;
+            lblSearch.Text = "Search               ";
+            lblSearch.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panelTabMenu
+            // 
+            panelTabMenu.BackColor = Color.FromArgb(38, 113, 61);
+            panelTabMenu.Controls.Add(btnSharePoint);
+            panelTabMenu.Controls.Add(btnWorkbook1);
+            panelTabMenu.Controls.Add(btnWorkbook2);
+            panelTabMenu.Controls.Add(btnCompare);
+            panelTabMenu.Dock = DockStyle.Left;
+            panelTabMenu.Location = new Point(0, 36);
+            panelTabMenu.Name = "panelTabMenu";
+            panelTabMenu.Size = new Size(170, 846);
+            panelTabMenu.TabIndex = 4;
             // 
             // btnSharePoint
             // 
-            this.btnSharePoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(154)))), ((int)(((byte)(5)))));
-            this.btnSharePoint.FlatAppearance.BorderSize = 0;
-            this.btnSharePoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSharePoint.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSharePoint.ForeColor = System.Drawing.Color.White;
-            this.btnSharePoint.Location = new System.Drawing.Point(549, 27);
-            this.btnSharePoint.Name = "btnSharePoint";
-            this.btnSharePoint.Size = new System.Drawing.Size(149, 44);
-            this.btnSharePoint.TabIndex = 1;
-            this.btnSharePoint.Text = "Share Point";
-            this.btnSharePoint.UseVisualStyleBackColor = false;
-            this.btnSharePoint.Click += new System.EventHandler(this.btnSharePoint_Click);
+            btnSharePoint.BackColor = Color.FromArgb(38, 113, 61);
+            btnSharePoint.FlatAppearance.BorderColor = Color.FromArgb(38, 113, 61);
+            btnSharePoint.FlatStyle = FlatStyle.Flat;
+            btnSharePoint.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSharePoint.ForeColor = Color.White;
+            btnSharePoint.Location = new Point(0, 133);
+            btnSharePoint.Name = "btnSharePoint";
+            btnSharePoint.Size = new Size(170, 42);
+            btnSharePoint.TabIndex = 3;
+            btnSharePoint.Text = "Share Point";
+            btnSharePoint.UseVisualStyleBackColor = false;
             // 
-            // btnLoadFile2
+            // btnWorkbook1
             // 
-            this.btnLoadFile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(154)))), ((int)(((byte)(5)))));
-            this.btnLoadFile2.FlatAppearance.BorderSize = 0;
-            this.btnLoadFile2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadFile2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLoadFile2.ForeColor = System.Drawing.Color.White;
-            this.btnLoadFile2.Location = new System.Drawing.Point(899, 90);
-            this.btnLoadFile2.Name = "btnLoadFile2";
-            this.btnLoadFile2.Size = new System.Drawing.Size(149, 44);
-            this.btnLoadFile2.TabIndex = 2;
-            this.btnLoadFile2.Text = "File 2 ";
-            this.btnLoadFile2.UseVisualStyleBackColor = false;
+            btnWorkbook1.BackColor = Color.FromArgb(38, 113, 61);
+            btnWorkbook1.FlatAppearance.BorderColor = Color.FromArgb(38, 113, 61);
+            btnWorkbook1.FlatStyle = FlatStyle.Flat;
+            btnWorkbook1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWorkbook1.ForeColor = Color.White;
+            btnWorkbook1.Location = new Point(0, 181);
+            btnWorkbook1.Name = "btnWorkbook1";
+            btnWorkbook1.Size = new Size(170, 42);
+            btnWorkbook1.TabIndex = 2;
+            btnWorkbook1.Text = "Workbook 1";
+            btnWorkbook1.UseVisualStyleBackColor = false;
             // 
-            // btnLoadFile1
+            // btnWorkbook2
             // 
-            this.btnLoadFile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(154)))), ((int)(((byte)(5)))));
-            this.btnLoadFile1.FlatAppearance.BorderSize = 0;
-            this.btnLoadFile1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadFile1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLoadFile1.ForeColor = System.Drawing.Color.White;
-            this.btnLoadFile1.Location = new System.Drawing.Point(231, 90);
-            this.btnLoadFile1.Name = "btnLoadFile1";
-            this.btnLoadFile1.Size = new System.Drawing.Size(149, 44);
-            this.btnLoadFile1.TabIndex = 3;
-            this.btnLoadFile1.Text = "File 1";
-            this.btnLoadFile1.UseVisualStyleBackColor = false;
-            this.btnLoadFile1.Click += new System.EventHandler(this.btnLoadFile1_Click);
-            // 
-            // btnSubmitFile1
-            // 
-            this.btnSubmitFile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(154)))), ((int)(((byte)(5)))));
-            this.btnSubmitFile1.FlatAppearance.BorderSize = 0;
-            this.btnSubmitFile1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitFile1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSubmitFile1.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitFile1.Location = new System.Drawing.Point(12, 867);
-            this.btnSubmitFile1.Name = "btnSubmitFile1";
-            this.btnSubmitFile1.Size = new System.Drawing.Size(149, 43);
-            this.btnSubmitFile1.TabIndex = 4;
-            this.btnSubmitFile1.Text = "Submit";
-            this.btnSubmitFile1.UseVisualStyleBackColor = false;
-            // 
-            // btnSubmitFile2
-            // 
-            this.btnSubmitFile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(154)))), ((int)(((byte)(5)))));
-            this.btnSubmitFile2.FlatAppearance.BorderSize = 0;
-            this.btnSubmitFile2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitFile2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSubmitFile2.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitFile2.Location = new System.Drawing.Point(651, 867);
-            this.btnSubmitFile2.Name = "btnSubmitFile2";
-            this.btnSubmitFile2.Size = new System.Drawing.Size(149, 43);
-            this.btnSubmitFile2.TabIndex = 5;
-            this.btnSubmitFile2.Text = "Submit";
-            this.btnSubmitFile2.UseVisualStyleBackColor = false;
-            // 
-            // lbxOutputFile1
-            // 
-            this.lbxOutputFile1.FormattingEnabled = true;
-            this.lbxOutputFile1.ItemHeight = 15;
-            this.lbxOutputFile1.Location = new System.Drawing.Point(12, 152);
-            this.lbxOutputFile1.Name = "lbxOutputFile1";
-            this.lbxOutputFile1.Size = new System.Drawing.Size(634, 709);
-            this.lbxOutputFile1.TabIndex = 6;
-            // 
-            // lbxOutputFile2
-            // 
-            this.lbxOutputFile2.FormattingEnabled = true;
-            this.lbxOutputFile2.ItemHeight = 15;
-            this.lbxOutputFile2.Location = new System.Drawing.Point(651, 152);
-            this.lbxOutputFile2.Name = "lbxOutputFile2";
-            this.lbxOutputFile2.Size = new System.Drawing.Size(645, 709);
-            this.lbxOutputFile2.TabIndex = 7;
-            // 
-            // openFile
-            // 
-            this.openFile.FileName = "openFile";
+            btnWorkbook2.BackColor = Color.FromArgb(38, 113, 61);
+            btnWorkbook2.FlatAppearance.BorderColor = Color.FromArgb(38, 113, 61);
+            btnWorkbook2.FlatStyle = FlatStyle.Flat;
+            btnWorkbook2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWorkbook2.ForeColor = Color.White;
+            btnWorkbook2.Location = new Point(0, 229);
+            btnWorkbook2.Name = "btnWorkbook2";
+            btnWorkbook2.Size = new Size(170, 42);
+            btnWorkbook2.TabIndex = 1;
+            btnWorkbook2.Text = "Workbook 2";
+            btnWorkbook2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 931);
-            this.Controls.Add(this.lbxOutputFile2);
-            this.Controls.Add(this.lbxOutputFile1);
-            this.Controls.Add(this.btnSubmitFile2);
-            this.Controls.Add(this.btnSubmitFile1);
-            this.Controls.Add(this.btnLoadFile1);
-            this.Controls.Add(this.btnLoadFile2);
-            this.Controls.Add(this.btnSharePoint);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Excel Compare";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1349, 882);
+            Controls.Add(splitContainerDataGridView);
+            Controls.Add(panelTabMenu);
+            Controls.Add(panelNavBar);
+            Name = "Form1";
+            Text = "Excel Compare";
+            splitContainerDataGridView.Panel1.ResumeLayout(false);
+            splitContainerDataGridView.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainerDataGridView).EndInit();
+            splitContainerDataGridView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            panelNavBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).EndInit();
+            panelTabMenu.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem homeToolStripMenuItem;
-        private ToolStripMenuItem saveToolStripMenuItem;
-        private ToolStripMenuItem saveAsToolStripMenuItem;
-        private ToolStripMenuItem printToolStripMenuItem;
-        private ToolStripMenuItem helpToolStripMenuItem;
-        private ToolStripMenuItem howToToolStripMenuItem;
+        private Button btnCompare;
+        private SplitContainer splitContainerDataGridView;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn NameColumn;
+        private DataGridViewTextBoxColumn Description;
+        private Panel panelNavBar;
+        private Panel panelTabMenu;
+        private Label lblSearch;
+        private Label lblHelp;
+        private PictureBox pictureBoxMenu;
         private Button btnSharePoint;
-        private Button btnLoadFile2;
-        private Button btnLoadFile1;
-        private Button btnSubmitFile1;
-        private Button btnSubmitFile2;
-        private ListBox lbxOutputFile1;
-        private ListBox lbxOutputFile2;
-        private OpenFileDialog openFile;
+        private Button btnWorkbook1;
+        private Button btnWorkbook2;
     }
 }
